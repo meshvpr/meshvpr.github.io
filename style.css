@@ -1,0 +1,76 @@
+body,
+html {
+  font-family: "Helvetica", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+h1 .sub {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+header {
+  text-align: center;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 8rem;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
+}
+
+.sec-abstract {
+  line-height: 2rem;
+}
+
+.full-width-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.sec-meshvpr-results {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sec-meshvpr-results-img {
+  width: 60%;
+}
+
+.sec-description {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  line-height: 1.75rem;
+}

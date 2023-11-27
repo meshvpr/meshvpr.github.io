@@ -1,1 +1,75 @@
-Hello world
+<html>
+  <head>
+    <title>MeshVPR</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        Berlin in a Day with MeshVPR<br />
+        <span class="sub"
+          >Citywide Visual Place Recognition Using 3D Meshes
+        </span>
+      </h1>
+    </header>
+    <main>
+      <section class="sec-video">
+        <iframe
+          class="full-width-video"
+          src="https://www.youtube-nocookie.com/embed/mHh_8K10R4M"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <section class="sec-abstract">
+        <h2>Abstract</h2>
+        Visual Place Recognition (VPR), i.e., the task of finding the location
+        of a photo, is commonly addressed as an image retrieval problem from a
+        database of geo-tagged images. Despite being often overlooked, the
+        collection of such a database is a practical challenge, particularly for
+        large-scale settings when the VPR system must be deployed to one or
+        multiple cities. To solve this problem we introduce a hybrid VPR
+        pipeline which leverages the increasing availability of free 3D meshes
+        of entire cities. Our pipeline, called MeshVPR, uses 3D meshes to create
+        a database of synthetic images from arbitrary views for the deployment
+        of a VPR model pre-trained on real data. We further use a lightweight
+        fine-tuning features alignment step in order to handle the appearance
+        gap between real and synthetic images. MeshVPR allows to quickly deploy
+        a VPR model to any city, as proven by creating a system for Berlin in
+        less than a day. Extensive experiments demonstrate that MeshVPR achieves
+        results that are competitive w.r.t traditional VPR systems that use
+        databases of real images (only 5% drop in Recall@5).
+      </section>
+
+      <section class="sec-pipeline">
+        <img src="assets/pipeline.jpg" alt="Teaser" />
+        <div class="sec-description">
+          <b>Our proposed pipeline for hybrid image retrieval.</b> The training phase
+          is made of steps 1, 2 and 3, and can be performed on any city with a
+          dataset of real images and a 3D mesh (we use San Francisco). Once the
+          training phase is completed, the deployment phase can take part on any
+          target city: in this paper we show results on Berlin, Paris and
+          Melbourne. More in details, steps 1 and 2 aim at creating a set of
+          real-synthetic pairs of images, to be used for the features alignment
+          step (3). For the deployment, a database of synthetic images is
+          extracted from any target 3D city mesh (step 4), and finally our
+          proposed hybrid retrieval architecture is employed to geo localize
+          real-world query images (step 5)
+        </div>
+      </section>
+
+      <!-- <section class="sec-meshvpr-results">
+        <img
+          class="sec-meshvpr-results-img"
+          src="assets/meshvpr_results.png"
+          alt="Teaser"
+        />
+        <div class="sec-description">
+          Comparison of different SOTA VPR methods with and without MeshVPR.
+        </div>
+      </section> -->
+    </main>
+  </body>
+</html>
