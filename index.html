@@ -2,6 +2,11 @@
   <head>
     <title>MeshVPR</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
   </head>
   <body>
     <header>
@@ -46,30 +51,53 @@
       <section class="sec-pipeline">
         <img src="assets/pipeline.jpg" alt="Teaser" />
         <div class="sec-description">
-          <b>Our proposed pipeline for hybrid image retrieval.</b> The training phase
-          is made of steps 1, 2 and 3, and can be performed on any city with a
-          dataset of real images and a 3D mesh (we use San Francisco). Once the
-          training phase is completed, the deployment phase can take part on any
-          target city: in this paper we show results on Berlin, Paris and
-          Melbourne. More in details, steps 1 and 2 aim at creating a set of
-          real-synthetic pairs of images, to be used for the features alignment
-          step (3). For the deployment, a database of synthetic images is
-          extracted from any target 3D city mesh (step 4), and finally our
+          <b>Our proposed pipeline for hybrid image retrieval.</b> The training
+          phase is made of steps 1, 2 and 3, and can be performed on any city
+          with a dataset of real images and a 3D mesh (we use San Francisco).
+          Once the training phase is completed, the deployment phase can take
+          part on any target city: in this paper we show results on Berlin,
+          Paris and Melbourne. More in details, steps 1 and 2 aim at creating a
+          set of real-synthetic pairs of images, to be used for the features
+          alignment step (3). For the deployment, a database of synthetic images
+          is extracted from any target 3D city mesh (step 4), and finally our
           proposed hybrid retrieval architecture is employed to geo localize
           real-world query images (step 5)
         </div>
       </section>
-
-      <!-- <section class="sec-meshvpr-results">
-        <img
-          class="sec-meshvpr-results-img"
-          src="assets/meshvpr_results.png"
-          alt="Teaser"
-        />
-        <div class="sec-description">
-          Comparison of different SOTA VPR methods with and without MeshVPR.
+      <section class="sec-results">
+        <h2>Example Results</h2>
+        <div class="example-queries">
+          <div class="example-query" onclick="setMap(this)">
+            <img
+              src="assets/examples/_10a6ddf4_query@52.49042@13.39269@success.jpg"
+              data-preds="assets/examples/_10a6ddf4@52.49045@13.39274@success.jpg;assets/examples/_10a6ddf4@52.49047@13.39262@success.jpg;assets/examples/_10a6ddf4@52.49049@13.39266@success.jpg;assets/examples/_10a6ddf4@52.53102@13.42728@_failure.jpg;assets/examples/_10a6ddf4@52.53114@13.42744@failure.jpg"
+            />
+          </div>
+          <div class="example-query" onclick="setMap(this)">
+            <img
+              src="assets/examples/_e6d4ef08_query@52.48753@13.38411@success.jpg"
+              data-preds="assets/examples/_e6d4ef08@52.48766@13.38397@success.jpg;assets/examples/_e6d4ef08@52.49720@13.34247@failure.jpg;assets/examples/_e6d4ef08@52.50317@13.45528@failure.jpg;assets/examples/_e6d4ef08@52.50319@13.45520@failure.jpg;assets/examples/_e6d4ef08@52.50351@13.45582@failure.jpg"
+            />
+          </div>
+          <div class="example-query" onclick="setMap(this)">
+            <img
+              src="assets/examples/_e81069c0_query@52.50439@13.38232@success.jpg"
+              data-preds="assets/examples/_e81069c0@52.50432@13.38236@success.jpg;assets/examples/_e81069c0@52.50439@13.38235@success.jpg;assets/examples/_e81069c0@52.50446@13.38226@success.jpg;assets/examples/_e81069c0@52.50457@13.38217@success.jpg;assets/examples/_e81069c0@52.51073@13.36871@failure.jpg"
+            />
+          </div>
+          <div class="example-query" onclick="setMap(this)">
+            <img
+              src="assets/examples/_faac82e7_query@52.49989@13.35393@success.jpg"
+              data-preds="assets/examples/_faac82e7@52.49981@13.34109@_failure.jpg;assets/examples/_faac82e7@52.49983@13.34124@failure.jpg;assets/examples/_faac82e7@52.49984@13.34128@failure.jpg;assets/examples/_faac82e7@52.49992@13.35389@success.jpg;assets/examples/_faac82e7@52.51958@13.37191@failure.jpg"
+            />
+          </div>
         </div>
-      </section> -->
+        <div id="map"></div>
+        <br />
+        Results maybe overlapping zoom in to see them all.
+        Click on on image in the map to zoom in.
+      </section>
     </main>
   </body>
+  <script src="index.js"></script>
 </html>
