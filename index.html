@@ -11,7 +11,7 @@
   <body>
     <header>
       <h1>
-        Berlin in a Day with MeshVPR<br />
+        MeshVPR<br />
         <span class="sub"
           >Citywide Visual Place Recognition Using 3D Meshes
         </span>
@@ -21,7 +21,7 @@
       <section class="sec-video">
         <iframe
           class="full-width-video"
-          src="https://www.youtube-nocookie.com/embed/gFoxT02J6C0"
+          src="https://www.youtube-nocookie.com/embed/rWF-LfsDJKA"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -30,38 +30,37 @@
       </section>
       <section class="sec-abstract">
         <h2>Abstract</h2>
-        Visual Place Recognition (VPR), i.e., the task of finding the location
-        of a photo, is commonly addressed as an image retrieval problem from a
-        database of geo-tagged images. Despite being often overlooked, the
-        collection of such a database is a practical challenge, particularly for
-        large-scale settings when the VPR system must be deployed to one or
-        multiple cities. To solve this problem we introduce a hybrid VPR
-        pipeline which leverages the increasing availability of free 3D meshes
-        of entire cities. Our pipeline, called MeshVPR, uses 3D meshes to create
-        a database of synthetic images from arbitrary views for the deployment
-        of a VPR model pre-trained on real data. We further use a lightweight
-        fine-tuning features alignment step in order to handle the appearance
-        gap between real and synthetic images. MeshVPR allows to quickly deploy
-        a VPR model to any city, as proven by creating a system for Berlin in
-        less than a day. Extensive experiments demonstrate that MeshVPR achieves
-        results that are competitive w.r.t traditional VPR systems that use
-        databases of real images (only 5% drop in Recall@5).
+        Mesh-based scene representation offers a promising direction for
+        simplifying large-scale hierarchical visual localization pipelines,
+        combining a visual place recognition step based on global features
+        (retrieval) and a visual localization step based on local features.
+        While existing work demonstrates the viability of meshes for visual
+        localization, the impact of using synthetic databases rendered from them
+        in visual place recognition remains largely unexplored. In this work we
+        investigate using dense 3D textured meshes for large-scale Visual Place
+        Recognition (VPR) and identify a significant performance drop when using
+        synthetic mesh-based databases compared to real-world images for
+        retrieval. To address this, we propose MeshVPR, a novel VPR pipeline
+        that utilizes a lightweight features alignment framework to bridge the
+        gap between real-world and synthetic domains. MeshVPR leverages
+        pre-trained VPR models and it is efficient and scalable for city-wide
+        deployments. We introduce novel datasets with freely available 3D meshes
+        and manually collected queries from Berlin, Paris, and Melbourne.
+        Extensive evaluations demonstrate that MeshVPR achieves competitive
+        performance with standard VPR pipelines, paving the way for mesh-based
+        localization systems. Our contributions include the new task of citywide
+        mesh-based VPR, the new benchmark datasets, MeshVPR, and a thorough
+        analysis of open challenges.
       </section>
 
       <section class="sec-pipeline">
         <img src="assets/pipeline.jpg" alt="Teaser" />
         <div class="sec-description">
-          <b>Our proposed pipeline for hybrid image retrieval.</b> The training
-          phase is made of steps 1, 2 and 3, and can be performed on any city
-          with a dataset of real images and a 3D mesh (we use San Francisco).
-          Once the training phase is completed, the deployment phase can take
-          part on any target city: in this paper we show results on Berlin,
-          Paris and Melbourne. More in details, steps 1 and 2 aim at creating a
-          set of real-synthetic pairs of images, to be used for the features
-          alignment step (3). For the deployment, a database of synthetic images
-          is extracted from any target 3D city mesh (step 4), and finally our
-          proposed hybrid retrieval architecture is employed to geo localize
-          real-world query images (step 5)
+          <b>Our proposed pipeline for mesh-based visual place recognition.</b>
+          The training phase consists in downloading training (real) images and
+          the 3D mesh, generating their synthetic counterparts and specializing
+          the synthetic model through feature alignment. Once the training phase
+          is completed, the deployment phase can take part on any target city.
         </div>
       </section>
       <section class="sec-results">
@@ -94,8 +93,8 @@
         </div>
         <div id="map"></div>
         <br />
-        Results maybe overlapping zoom in to see them all.
-        Click on on image in the map to zoom in.
+        Results maybe overlapping zoom in to see them all. Click on on image in
+        the map to zoom in.
       </section>
     </main>
   </body>
