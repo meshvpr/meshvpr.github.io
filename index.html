@@ -16,17 +16,62 @@
           >Citywide Visual Place Recognition Using 3D Meshes
         </span>
       </h1>
+      <div class="authors">
+        <div class="names">
+          <a href="https://gmberton.github.io/">Gabriele Berton</a><sup>1</sup>, <a href="https://lolleko.github.io">Lorenz Junglas</a><sup>2</sup>, <a>Riccardo Zaccone</a><sup>1</sup>, <a>Thomas Pollok</a><sup>3</sup>, <a>Barbara Caputo</a><sup>1</sup>, <a>Carlo Masone</a><sup>1</sup>
+        </div>
+        <div class="affiliations">
+          <sup>1</sup>Polytechnic of Turin, <sup>2</sup>Karlsruhe Institute of Technology, <sup>3</sup>Fraunhofer IOSB
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://arxiv.org/pdf/2406.02776">
+          <img src="./assets/icons/pdf.svg"/>
+          Paper
+        </a>
+        <a href="https://arxiv.org/pdf/2406.02776">
+          <img src="./assets/icons/arxiv.svg"/>
+          arXiv
+        </a>
+        <a href="https://www.youtube.com/watch?v=rWF-LfsDJKA">
+          <img class="yt" src="./assets/icons/youtube.svg"/>
+          Video
+        </a>
+        <a href="https://github.com/gmberton/MeshVPR">
+          <img src="./assets/icons/github.svg"/>
+          Code (Evaluation)
+        </a>
+        <a href="#">
+          <img src="./assets/icons/github.svg"/>
+          Code (Data Generation)
+        </a>
+        <a href="https://github.com/gmberton/MeshVPR">
+          <img src="./assets/icons/images.svg"/>
+          Data
+        </a>
+      </div>
     </header>
     <main>
-      <section class="sec-video">
-        <iframe
-          class="full-width-video"
-          src="https://www.youtube-nocookie.com/embed/rWF-LfsDJKA"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+      <section class="header-videos">
+        <div class="header-videos-row">
+          <video autoplay loop muted playsinline>
+            <source src="assets/queries/berlin_short_01.mp4" type="video/mp4" />
+          </video>
+
+          <video autoplay loop muted playsinline>
+            <source src="assets/queries/berlin_short_03.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="header-videos-row">
+          <video autoplay loop muted playsinline>
+            <source src="assets/queries/sf_short_01.mp4" type="video/mp4" />
+          </video>
+
+          <video autoplay loop muted playsinline>
+            <source src="assets/queries/sf_short_02.mp4" type="video/mp4" />
+          </video>
+        </div>
       </section>
       <section class="sec-abstract">
         <h2>Abstract</h2>
@@ -52,7 +97,16 @@
         mesh-based VPR, the new benchmark datasets, MeshVPR, and a thorough
         analysis of open challenges.
       </section>
-
+      <section class="sec-video">
+        <iframe
+          class="full-width-video"
+          src="https://www.youtube-nocookie.com/embed/rWF-LfsDJKA"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
       <section class="sec-pipeline">
         <img src="assets/pipeline.jpg" alt="Teaser" />
         <div class="sec-description">
