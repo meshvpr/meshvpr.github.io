@@ -122,8 +122,9 @@ section {
 .sec-abstract {
   line-height: 2rem;
   text-align: justify;
-  padding-left: 5%;
-  padding-right: 5%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sec-video {
