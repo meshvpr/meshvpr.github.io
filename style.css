@@ -57,6 +57,7 @@ h2 {
   vertical-align: middle;
   display: inline-block;
   height: 1rem;
+  white-space: nowrap;
 }
 
 .links img {
@@ -70,18 +71,24 @@ h2 {
   vertical-align: 0rem;
 }
 
-.header-videos-row {
-  width: 100%;
+.header-videos {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header-videos-row {
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .header-videos-row video {
-  width: 50%;
+  width: calc(50% - 0.5rem);
 }
 
 header h1 {
@@ -97,7 +104,9 @@ header {
 }
 
 main {
-
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img {
@@ -107,9 +116,7 @@ img {
 section {
   margin-bottom: 4rem;
   font-size: 1.2rem;
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .sec-abstract {
@@ -117,6 +124,12 @@ section {
   text-align: justify;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.sec-video {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .full-width-video {
@@ -134,12 +147,16 @@ section {
   width: 60%;
 }
 
+.sec-pipeline {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .sec-description {
   padding-top: 2rem;
   padding-bottom: 2rem;
   line-height: 1.75rem;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 .sec-results {

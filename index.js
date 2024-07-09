@@ -2,8 +2,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibG9sbGVrbyIsImEiOiJjbGFzM2IwamwxeWtuM3hsYjBlb
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v12',
-    center: [12.550343, 55.665957],
-    zoom: 8
+    zoom: 3,
+    center: [13.381777, 55.531677],
 });
 
 function createCustomMarker(image_src) {
